@@ -2,7 +2,7 @@ version: '2'
 services:
   cerebro:
     tty: true
-    image: yannart/cerebro:${image_version}
+    image: lmenezes/cerebro:${image_version}
     command: /bin/sh -c 'echo "play.ws.ssl.loose.acceptAnyCertificate = true" >> /opt/cerebro/conf/reference.conf && /opt/cerebro/bin/cerebro'
     ${mem_limit}
     cpu_shares: ${cpu_shares}
