@@ -11,7 +11,7 @@ variable "finish_upgrade" {
 
 variable "image_version" {
   description = "The image version of Cerebro to use"
-  default = "0.8.1"
+  default = "0.8.3"
 }
 variable "scale" {
   description = "Set the number of instance you should. Don't use it if you should global_scheduling as true"
