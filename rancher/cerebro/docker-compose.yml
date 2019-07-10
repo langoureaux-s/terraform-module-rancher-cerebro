@@ -6,7 +6,7 @@ services:
     entrypoint:
       - sh
       - -c
-    command: 'echo "play.ws.ssl.loose.acceptAnyCertificate = true" >> /opt/cerebro/conf/reference.conf && /opt/cerebro/bin/cerebro'
+    command: sh -c 'echo "play.ws.ssl.loose.acceptAnyCertificate = true" >> /opt/cerebro/conf/reference.conf && /opt/cerebro/bin/cerebro'
     ${mem_limit}
     cpu_shares: ${cpu_shares}
     labels:
