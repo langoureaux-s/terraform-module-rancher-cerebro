@@ -3,7 +3,10 @@ services:
   cerebro:
     tty: true
     image: lmenezes/cerebro:${image_version}
-    command: /bin/sh -c 'echo "play.ws.ssl.loose.acceptAnyCertificate = true" >> /opt/cerebro/conf/reference.conf && /opt/cerebro/bin/cerebro'
+    entrypoint:
+      - sh
+      - -c
+    command: 'echo "play.ws.ssl.loose.acceptAnyCertificate = true" >> /opt/cerebro/conf/reference.conf && /opt/cerebro/bin/cerebro'
     ${mem_limit}
     cpu_shares: ${cpu_shares}
     labels:
